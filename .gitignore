@@ -1,0 +1,5 @@
+build/
+build/CMakeFiles/
+!build/keep.txt
+cmake-build-debug/
+.idea/
