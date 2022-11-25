@@ -19,5 +19,6 @@ public:
 
     Window m_window;
     Automata m_automata;
+    float fps_max = 30.0;
 };
 #endif //AUTOMATA_ENGINE_HPP

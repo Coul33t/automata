@@ -2,15 +2,15 @@
 // Created by couland-q on 22/11/22.
 //
 
-#ifndef AUTOMATA_TILE_HPP
-#define AUTOMATA_TILE_HPP
+#ifndef AUTOMATA_CELL_HPP
+#define AUTOMATA_CELL_HPP
 
-class Tile {
+class Cell {
 public:
-    Tile();
-    explicit Tile(int state);
-    ~Tile();
+    Cell();
+    explicit Cell(int state);
+    ~Cell();
 
     int m_state;
 };
-#endif //AUTOMATA_TILE_HPP
+#endif //AUTOMATA_CELL_HPP

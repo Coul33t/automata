@@ -8,7 +8,7 @@
 #include "../../extlib/random/random.hpp"
 namespace Random {
     using EffoRandom = effolkronium::random_static;
-    int get_int(int min, int max, int seed);
+    int get_int(int min, int max, int seed = 7);
 }
 
 #endif //AUTOMATA_TOOLS_HPP

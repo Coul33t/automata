@@ -7,7 +7,7 @@
 
 #include <cstddef> // size_t
 
-#define colour std::vector<int>
+#define Colour std::vector<int>
 
 struct Size {
     int w, h;
@@ -20,6 +20,20 @@ struct Size {
     Size(int w, int h) {
         this->w = w;
         this->h = h;
+    }
+};
+
+struct Coord {
+    int x, y;
+
+    Coord() {
+        x = 0;
+        y = 0;
+    }
+
+    Coord(int x, int y) {
+        this->x = x;
+        this->y = y;
     }
 };
 #endif //AUTOMATA_TYPES_HPP

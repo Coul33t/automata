@@ -22,14 +22,20 @@ public:
 
     bool init(int w = -1, int = -1);
 
-    void drawShape(const Shape& shape, const colour& col);
+    void drawShape(const Shape& shape, const Colour& col);
+    void drawBackground();
     void drawGrid(const Grid& grid);
+
+    void setRenderDrawColor(const Colour& col);
 
     //The window we'll be rendering to
     SDL_Window* m_window = nullptr;
 
     //The surface contained by the window
     SDL_Surface* m_screen_surface = nullptr;
+
+    //The window renderer
+    SDL_Renderer* m_renderer = nullptr;
 
     Size m_window_size;
 };

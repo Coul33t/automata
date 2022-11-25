@@ -6,23 +6,29 @@
 
 #include "../../extlib/random/random.hpp"
 
-#include "tile.hpp"
+#include "cell.hpp"
 #include "types.hpp"
+#include "tools.hpp"
+
+#include <iostream>
 
 class Grid {
 public:
     explicit Grid(int w = 20, int h = 10);
     ~Grid();
 
-    void init(int w, int h);
-    void reset(int w = 1, int h = 1);
-    void setRandomState();
+    void init(int w, int h, int nb_states);
+    void reset(int nb_states, int w = 1, int h = 1);
+    void setRandomState(int nb_states);
+
+    std::vector<std::vector<int>> getStatesCopy();
+    void setStates(std::vector<std::vector<int>> new_states);
 
     int compute_state(int x, int y);
 
-    std::vector<std::vector<Tile>> m_tiles;
+    std::vector<std::vector<Cell>> m_cells;
     Size m_size;
     size_t m_cell_size;
-    std::map<int, colour> colours_association;
+    std::map<int, Colour> colours_association;
 };
 #endif
